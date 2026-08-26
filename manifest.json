@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.razkaroth.omajam-lyrics-plus",
   "name": "OmaJam - Lyrics+ Edition",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Nicolas Aranda (Razkaroth), based on OmaJam by Nathan Ollerenshaw",
   "description": "An OmaJam edition for Omarchy with synchronized embedded lyrics, an album-art lyrics stage, active-line highlighting, smooth auto-follow, and click-to-seek. Includes the complete MPD queue, library, search, playlist, and bar controls from the original OmaJam.",
   "license": "MIT",

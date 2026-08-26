@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Razkaroth/omajam-lyrics-plus/compare/v1.0.0...v1.1.0) (2026-08-26)
+
+
+### Features
+
+* publish Lyrics+ edition ([261091c](https://github.com/Razkaroth/omajam-lyrics-plus/commit/261091cb670e28738d0c0873ba07fce6cf611f0e))
+
 ## 1.0.0 - 2026-08-26
 
 Initial Lyrics+ Edition, based on OmaJam 1.1.1 by Nathan Ollerenshaw.
