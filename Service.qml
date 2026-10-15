@@ -34,7 +34,15 @@ Item {
   // Read out of the bar layout entry the widget writes through setBarWidget,
   // exactly as the widget reads them, so a saved change reaches the connection
   // without a shell restart.
-  readonly property var settings: lookupSettings(shell ? shell.shellConfig : null, pluginId)
+  //
+  // `shell` here is the sandboxed proxy a third-party plugin receives
+  // (createScopedPluginShell in the shell's own shell.qml), not the shell's
+  // own root object. That proxy exposes `barConfig` -- a clone of
+  // `shellConfig.bar` -- and has no `shellConfig` property at all. Reading
+  // `shell.shellConfig` here was always undefined, so `settings` was always
+  // `{}` and every widget-configured field (host, port, lyricsDirectory, ...)
+  // silently fell back to its default no matter what the panel saved.
+  readonly property var settings: lookupSettings(shell && shell.barConfig ? { bar: shell.barConfig } : null, pluginId)
 
   function setting(name, fallback) {
     var value = settings ? settings[name] : undefined
